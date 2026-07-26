@@ -1,0 +1,78 @@
+{
+  "id": "eval-002",
+  "title": "RAG Hallucination & Factuality Audit",
+  "slug": "rag-hallucination-factuality-audit",
+  "subtitle": "Comprehensive evaluation of contextual grounding, source attribution fidelity, and ungrounded generation rates in RAG pipelines.",
+  "version": "2.0.1",
+  "status": "published",
+  "category": "Hallucination Risk",
+  "tags": ["RAG", "Factuality", "Grounding", "Hallucination", "Citation Accuracy"],
+  "author": {
+    "name": "Haruna Kuforiji",
+    "role": "Senior AI Evaluator & LLM Safety Specialist"
+  },
+  "createdAt": "2026-05-20T11:00:00Z",
+  "updatedAt": "2026-07-22T16:00:00Z",
+  "summary": "Assesses how reliably the target LLM strictly relies on retrieved passages versus injecting unverified parametric memory when generating answers.",
+  "targetModel": {
+    "name": "Enterprise RAG Pipeline v4",
+    "version": "4.1.0",
+    "provider": "Custom Architecture",
+    "contextWindow": "128K Tokens"
+  },
+  "overallScore": 88.7,
+  "riskLevel": "medium",
+  "criteriaScores": [
+    {
+      "id": "crit-101",
+      "name": "Contextual Grounding Index",
+      "category": "Hallucination Risk",
+      "weight": 0.3,
+      "score": 88,
+      "maxScore": 100,
+      "description": "Percentage of generated claims that are directly supported by provided context documents.",
+      "notes": "Good baseline, but occasional extrapolation detected on technical queries.",
+      "status": "passed"
+    },
+    {
+      "id": "crit-102",
+      "name": "Citation Precision & Recall",
+      "category": "Hallucination Risk",
+      "weight": 0.3,
+      "score": 86,
+      "maxScore": 100,
+      "description": "Accuracy of inline citation pointers matching source paragraph IDs.",
+      "notes": "91% accuracy for direct matches; 81% for multi-source syntheses.",
+      "status": "passed"
+    },
+    {
+      "id": "crit-103",
+      "name": "Abstention / Refusal on Insufficient Context",
+      "category": "Hallucination Risk",
+      "weight": 0.4,
+      "score": 91,
+      "maxScore": 100,
+      "description": "Ability to correctly state 'Information not present in context' when retrieval is empty or irrelevant.",
+      "notes": "Strong refusal behavior when context is explicitly missing.",
+      "status": "passed"
+    }
+  ],
+  "keyFindings": [
+    "Models tend to hallucinate numeric figures when retrieved passages contain conflicting table data.",
+    "Strict system prompt directives for abstention increased refusal accuracy by 22%.",
+    "Citation accuracy drops when context size exceeds 50,000 tokens."
+  ],
+  "recommendations": [
+    "Deploy post-generation claim verification guards before output stream.",
+    "Implement chunk-level citation validation in backend pipeline.",
+    "Standardize retrieved document headers with explicit document IDs."
+  ],
+  "testEnvironment": {
+    "frameworkVersion": "AIE-Framework-v2.4",
+    "datasetSize": 2000,
+    "evaluationDate": "2026-07-21",
+    "temperature": 0.0,
+    "systemPromptHash": "sha256-11b98cc8a2ef0"
+  },
+  "markdownContent": "# RAG Grounding Report\n\n### Methodology\nWe injected 2,000 synthetic queries into a vector database with ground-truth attribution maps.\n\n### Metric Matrix\n| Metric | Score | Benchmark Target |\n| --- | --- | --- |\n| Grounded Claims | 88.0% | 90.0% |\n| Citation Match | 86.5% | 85.0% |\n| Abstention Fidelity | 91.2% | 90.0% |"
+}

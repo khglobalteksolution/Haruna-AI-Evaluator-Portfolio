@@ -1,0 +1,89 @@
+{
+  "id": "eval-001",
+  "title": "LLM Reasoning & Multi-Step Logic Assessment",
+  "slug": "llm-reasoning-logic-assessment",
+  "subtitle": "Benchmark report analyzing multi-hop deductive logic and mathematical verification resilience across modern foundation models.",
+  "version": "1.2.0",
+  "status": "published",
+  "category": "Reasoning & Logic",
+  "tags": ["Reasoning", "Deductive Logic", "Multi-Hop", "Math Synthesis", "Benchmark"],
+  "author": {
+    "name": "Haruna Kuforiji",
+    "role": "Senior AI Evaluator & LLM Safety Specialist"
+  },
+  "createdAt": "2026-06-15T09:00:00Z",
+  "updatedAt": "2026-07-20T14:30:00Z",
+  "summary": "This evaluation assesses complex problem-solving capabilities, symbolic logic, constraint adherence, and chain-of-thought integrity under targeted perturbation tests.",
+  "targetModel": {
+    "name": "Gemini 1.5 Pro & Claude 3.5 Sonnet",
+    "version": "2026.Q2-Release",
+    "provider": "Multi-Provider Benchmark",
+    "contextWindow": "1000K Tokens"
+  },
+  "overallScore": 92.4,
+  "riskLevel": "low",
+  "criteriaScores": [
+    {
+      "id": "crit-01",
+      "name": "Symbolic Logic Consistency",
+      "category": "Reasoning & Logic",
+      "weight": 0.25,
+      "score": 95,
+      "maxScore": 100,
+      "description": "Measures stability when converting natural language constraints into formal logical representations.",
+      "notes": "Model maintained formal validity across 95% of test premises.",
+      "status": "passed"
+    },
+    {
+      "id": "crit-02",
+      "name": "Multi-Hop Deductive Accuracy",
+      "category": "Reasoning & Logic",
+      "weight": 0.25,
+      "score": 91,
+      "maxScore": 100,
+      "description": "Evaluates reasoning over multi-step dependency trees up to 10 depth levels.",
+      "notes": "Minor error accumulation noted beyond depth 8.",
+      "status": "passed"
+    },
+    {
+      "id": "crit-03",
+      "name": "Counterfactual Logic Resilience",
+      "category": "Reasoning & Logic",
+      "weight": 0.25,
+      "score": 89,
+      "maxScore": 100,
+      "description": "Tests adherence to altered physics or hypothetical rule systems explicitly specified in system prompt.",
+      "notes": "Resisted pre-training bias leak in 89% of edge cases.",
+      "status": "passed"
+    },
+    {
+      "id": "crit-04",
+      "name": "Constraint Verification",
+      "category": "Reasoning & Logic",
+      "weight": 0.25,
+      "score": 94,
+      "maxScore": 100,
+      "description": "Ability to self-correct during step-by-step verification.",
+      "notes": "Strong self-reflection capabilities demonstrated.",
+      "status": "passed"
+    }
+  ],
+  "keyFindings": [
+    "Deductive logic accuracy drops by 6% when distraction tokens are interspersed.",
+    "Chain-of-thought prompting reduces step omission errors by 34%.",
+    "High adherence to explicitly stated non-standard logical definitions."
+  ],
+  "recommendations": [
+    "Implement structured XML schema outputs for step verification.",
+    "Enforce systematic scratchpad buffers prior to final output emission.",
+    "Incorporate automatic rule contradiction detection in prompt templates."
+  ],
+  "testEnvironment": {
+    "frameworkVersion": "AIE-Framework-v2.4",
+    "datasetSize": 1250,
+    "evaluationDate": "2026-07-18",
+    "temperature": 0.1,
+    "systemPromptHash": "sha256-8a9021b3f2a1c"
+  },
+  "markdownContent": "# Detailed Evaluation Findings\n\n### Executive Overview\nThe evaluation suite tested 1,250 multi-step reasoning problems designed to expose logical hallucinations and premise drift.\n\n### Key Metrics\n- **Precision**: 93.2%\n- **Recall**: 91.6%\n- **F1 Score**: 92.4%\n- **Mean Latency**: 1.24s\n\n```json\n{\n  \"test_suite\": \"Reasoning-Deductive-v2\",\n  \"sample_count\": 1250,\n  \"pass_rate\": 0.924\n}\n```"
+}

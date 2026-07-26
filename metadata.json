@@ -1,0 +1,6 @@
+{
+  "name": "Haruna Kuforiji - AI Evaluator Portfolio",
+  "description": "Production-ready AI Evaluator Portfolio & Evaluation Framework website for Haruna Kuforiji.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

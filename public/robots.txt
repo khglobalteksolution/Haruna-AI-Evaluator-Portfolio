@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harunakuforiji.dev/sitemap.xml
