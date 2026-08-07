@@ -36,13 +36,21 @@ export const ResumeView: React.FC = () => {
     const plainTextResume = `HARUNA KUFORIJI
 Location: Nigeria | Phone: +234 810 162 8877 | Email: khglobalteksolution@gmail.com
 LinkedIn: https://www.linkedin.com/in/haruna-kuforiji-53406a299
-Portfolio: Coming Soon
+Portfolio: https://haruna-ai-evaluator-portfolio.netlify.app/
 
 PROFESSIONAL SUMMARY
 AI-certified Computer Science undergraduate with practical experience using large language models (LLMs) including ChatGPT, Google Gemini, and Claude for research, prompt development, content evaluation, and workflow support. Skilled in evaluating written content for clarity, accuracy, instruction adherence, and overall quality. Strong analytical thinking, multilingual communication, and attention to detail, complemented by experience in digital marketing, website development, and client-focused freelance work. Seeking an entry-level AI Evaluator, AI Trainer, AI Rater, or Prompt Engineer opportunity where I can contribute to the development of reliable and responsible AI systems.
 
+JSON & TECHNICAL EVALUATION
+* Reading and interpreting JSON schemas, structures, and key-value payloads
+* Identifying malformed JSON, syntax errors, and unescaped character glitches
+* Checking nested structures, arrays, and complex data hierarchies
+* Validating formatting, indentation, and standard JSON compliance
+* Reviewing API responses for payload accuracy, status codes, and schema alignment
+* Identifying syntax issues, missing brackets, trailing commas, and type mismatches
+
 CORE COMPETENCIES
-AI Evaluation • Prompt Engineering • LLM Response Review • AI Content Quality Assessment • Instruction Following Analysis • Fact Checking • Hallucination Detection • Writing Quality Review • Research & Information Verification • Critical Thinking • Data Annotation • Human Feedback • Quality Assurance • ChatGPT • Google Gemini • Claude • Microsoft Excel • Python (Foundational) • HTML • CSS • WordPress • Shopify • Digital Marketing • SEO • Email Marketing • Lead Generation
+AI Evaluation • Prompt Engineering • LLM Response Review • AI Content Quality Assessment • Instruction Following Analysis • Fact Checking • Hallucination Detection • Writing Quality Review • Research & Information Verification • Critical Thinking • Data Annotation • Human Feedback • Quality Assurance • JSON & Technical Evaluation • Reading & Interpreting JSON • Identifying Malformed JSON • Checking Nested Structures • Validating Formatting • Reviewing API Responses • Identifying Syntax Issues • ChatGPT • Google Gemini • Claude • Microsoft Excel • Python (Foundational) • HTML • CSS • WordPress • Shopify • Digital Marketing • SEO • Email Marketing • Lead Generation
 
 EDUCATION
 University of the People (UoPeople)
@@ -67,6 +75,7 @@ Digital Marketing & AI-Assisted Content Freelancer
 
 TECHNICAL SKILLS
 AI Tools: ChatGPT, Google Gemini, Claude
+JSON & API Evaluation: Reading and interpreting JSON, Identifying malformed JSON, Checking nested structures, Validating formatting, Reviewing API responses, Identifying syntax issues
 Programming: HTML, CSS, JavaScript (Foundational), Python (Foundational)
 Platforms: WordPress, Shopify
 Productivity: Microsoft Excel, Google Workspace, Canva
@@ -177,7 +186,14 @@ LANGUAGES
             </span>
             <span className="flex items-center gap-1.5">
               <Globe className="w-3.5 h-3.5 text-indigo-500 print:text-black" />
-              <span className="text-zinc-500 italic">Portfolio: (Coming Soon)</span>
+              <a
+                href="https://haruna-ai-evaluator-portfolio.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:underline text-indigo-600 dark:text-indigo-400 font-semibold print:text-black"
+              >
+                Portfolio Website
+              </a>
             </span>
           </div>
         </header>
@@ -195,6 +211,47 @@ LANGUAGES
               <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed print:text-zinc-900">
                 AI-certified Computer Science undergraduate with practical experience using large language models (LLMs) including ChatGPT, Google Gemini, and Claude for research, prompt development, content evaluation, and workflow support. Skilled in evaluating written content for clarity, accuracy, instruction adherence, and overall quality. Strong analytical thinking, multilingual communication, and attention to detail, complemented by experience in digital marketing, website development, and client-focused freelance work. Seeking an entry-level AI Evaluator, AI Trainer, AI Rater, or Prompt Engineer opportunity where I can contribute to the development of reliable and responsible AI systems.
               </p>
+            </section>
+
+            {/* JSON & Technical Evaluation */}
+            <section className="space-y-3">
+              <h2 className="text-xs font-extrabold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 border-b border-zinc-200 dark:border-zinc-800 pb-1.5 flex items-center gap-1.5 print:text-indigo-800 print:border-zinc-300">
+                <Code className="w-4 h-4 print:hidden" />
+                <span>JSON & Technical Evaluation</span>
+              </h2>
+
+              <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200/80 dark:border-zinc-800 space-y-2.5 print:bg-white print:border-zinc-300 print:p-2">
+                <p className="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed print:text-zinc-900 font-medium">
+                  Specialized technical evaluation competencies in inspecting structured model outputs, payload formatting, and API execution integrity:
+                </p>
+
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-700 dark:text-zinc-300 print:text-zinc-800">
+                  <li className="flex items-start gap-1.5 p-2 rounded-lg bg-white dark:bg-zinc-900/80 border border-zinc-200/60 dark:border-zinc-700/60 print:bg-white print:border-zinc-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5 print:hidden" />
+                    <span><strong>Reading & Interpreting JSON:</strong> Parsing structures, keys, values, and schema definitions.</span>
+                  </li>
+                  <li className="flex items-start gap-1.5 p-2 rounded-lg bg-white dark:bg-zinc-900/80 border border-zinc-200/60 dark:border-zinc-700/60 print:bg-white print:border-zinc-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5 print:hidden" />
+                    <span><strong>Identifying Malformed JSON:</strong> Catching unescaped quotes, trailing commas, and missing closures.</span>
+                  </li>
+                  <li className="flex items-start gap-1.5 p-2 rounded-lg bg-white dark:bg-zinc-900/80 border border-zinc-200/60 dark:border-zinc-700/60 print:bg-white print:border-zinc-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5 print:hidden" />
+                    <span><strong>Checking Nested Structures:</strong> Validating deeply nested objects, arrays, and relational logic.</span>
+                  </li>
+                  <li className="flex items-start gap-1.5 p-2 rounded-lg bg-white dark:bg-zinc-900/80 border border-zinc-200/60 dark:border-zinc-700/60 print:bg-white print:border-zinc-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5 print:hidden" />
+                    <span><strong>Validating Formatting:</strong> Ensuring proper indentation, structural linting, and schema compliance.</span>
+                  </li>
+                  <li className="flex items-start gap-1.5 p-2 rounded-lg bg-white dark:bg-zinc-900/80 border border-zinc-200/60 dark:border-zinc-700/60 print:bg-white print:border-zinc-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5 print:hidden" />
+                    <span><strong>Reviewing API Responses:</strong> Auditing REST payloads, function call outputs, and status codes.</span>
+                  </li>
+                  <li className="flex items-start gap-1.5 p-2 rounded-lg bg-white dark:bg-zinc-900/80 border border-zinc-200/60 dark:border-zinc-700/60 print:bg-white print:border-zinc-300">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5 print:hidden" />
+                    <span><strong>Identifying Syntax Issues:</strong> Diagnosing code block formatting, bracket mismatches, and data types.</span>
+                  </li>
+                </ul>
+              </div>
             </section>
 
             {/* Projects */}
@@ -277,6 +334,13 @@ LANGUAGES
                   'Data Annotation',
                   'Human Feedback (RLHF)',
                   'Quality Assurance',
+                  'JSON & Technical Evaluation',
+                  'Reading & Interpreting JSON',
+                  'Identifying Malformed JSON',
+                  'Checking Nested Structures',
+                  'Validating Formatting',
+                  'Reviewing API Responses',
+                  'Identifying Syntax Issues',
                   'ChatGPT',
                   'Google Gemini',
                   'Claude',
@@ -340,6 +404,10 @@ LANGUAGES
               </h2>
 
               <div className="space-y-2 text-xs">
+                <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200/80 dark:border-zinc-800/60 print:bg-white print:border-zinc-300">
+                  <span className="font-bold text-zinc-900 dark:text-zinc-100 block print:text-black">JSON & Technical Evaluation</span>
+                  <span className="text-zinc-600 dark:text-zinc-400 text-[11px] print:text-zinc-800">Reading & Interpreting JSON, Identifying Malformed JSON, Checking Nested Structures, Validating Formatting, Reviewing API Responses, Identifying Syntax Issues</span>
+                </div>
                 <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200/80 dark:border-zinc-800/60 print:bg-white print:border-zinc-300">
                   <span className="font-bold text-zinc-900 dark:text-zinc-100 block print:text-black">AI Tools</span>
                   <span className="text-zinc-600 dark:text-zinc-400 text-[11px] print:text-zinc-800">ChatGPT, Google Gemini, Claude</span>

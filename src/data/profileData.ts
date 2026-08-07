@@ -78,6 +78,17 @@ export const PROFILE_DATA: ProfessionalProfile = {
   ],
   coreCompetencies: [
     {
+      category: "JSON & Technical Evaluation",
+      skills: [
+        "Reading & Interpreting JSON",
+        "Identifying Malformed JSON",
+        "Checking Nested Structures",
+        "Validating Formatting & Schemas",
+        "Reviewing API Responses",
+        "Identifying Syntax Issues"
+      ]
+    },
+    {
       category: "LLM Benchmarking & Evaluation",
       skills: ["Automated Rubric Design", "Pass@1 Code Verification", "Multi-Hop Logic Testing", "RAG Citation Precision", "Synthetic Dataset Quality Audit"]
     },
@@ -177,6 +188,10 @@ export const PROFILE_DATA: ProfessionalProfile = {
     { name: "French", proficiency: "Working Professional" }
   ],
   technicalTools: [
+    {
+      category: "JSON & Technical Evaluation",
+      tools: ["Reading/Interpreting JSON", "Identifying Malformed JSON", "Nested Structure Validation", "Formatting & Schema Audit", "API Response Review", "Syntax Error Analysis"]
+    },
     {
       category: "Evaluation & Benchmarking",
       tools: ["AIE-v2.4 Framework", "Deepeval", "Ragas", "Promptfoo", "Giskard", "LangSmith", "LangFuse"]
