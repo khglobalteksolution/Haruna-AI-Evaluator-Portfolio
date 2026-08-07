@@ -1,0 +1,23 @@
+{
+  "id": "research-001",
+  "title": "Taxonomies of Hallucination in Retrieval-Augmented Generation",
+  "slug": "taxonomies-of-hallucination-in-rag",
+  "abstract": "A formal framework for classifying, detecting, and scoring contextual vs. parametric hallucinations in high-stakes enterprise AI systems.",
+  "category": "Hallucination Risk",
+  "tags": ["Research", "RAG", "Taxonomy", "Hallucination Detection", "LLM Evaluation"],
+  "publishedDate": "2026-06-10",
+  "updatedDate": "2026-07-15",
+  "readingTimeMinutes": 12,
+  "authors": ["Haruna Kuforiji"],
+  "content": "# Taxonomies of Hallucination in RAG\n\n## Abstract\nAs Retrieval-Augmented Generation (RAG) systems become central to enterprise applications, standard metrics like BLEU or ROUGE fail to detect fine-grained factual drifts. This paper presents a multi-tiered taxonomy separating **Entity Substitution**, **Relation Fabrication**, and **Temporal Misalignment**.\n\n## 1. Classification Matrix\n\n- **Type I: Contextual Omission**: Model ignores explicitly provided context in favor of pre-trained parameters.\n- **Type II: Entity Contagion**: Model swaps proper nouns or numerical attributes across retrieved documents.\n- **Type III: Speculative Extrapolation**: Model predicts logical consequences without supporting premises in context.\n\n## 2. Evaluation Methodology\nUsing dynamic perturbation testing, we measure hallucination rates across context lengths ranging from 1K to 128K tokens.\n\n```text
+Context Size (K Tokens)  | Type I Error | Type II Error | Overall Grounding Score
+1K                       | 0.8%         | 1.2%          | 98.0%
+32K                      | 2.4%         | 3.1%          | 94.5%
+128K                     | 5.1%         | 6.8%          | 88.1%
+```\n\n## Conclusion\nEnforcing strict schema validation at the output layer reduces Type II errors by up to 64%.",
+  "keyTakeaways": [
+    "Context size scaling exponentially increases entity swap errors if unguided.",
+    "Dual-pass verification models significantly outperform single-prompt evaluation.",
+    "Taxonomy-based scoring provides actionable engineering remediations."
+  ]
+}

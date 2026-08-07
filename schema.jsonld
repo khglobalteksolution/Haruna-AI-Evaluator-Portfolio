@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://harunakuforiji.dev/#person",
+      "name": "Haruna Kuforiji",
+      "jobTitle": "Senior AI Evaluator & LLM Safety Specialist",
+      "description": "Expert in AI evaluation methodologies, LLM benchmarking, safety taxonomies, hallucination risk audits, and prompt engineering governance.",
+      "url": "https://harunakuforiji.dev",
+      "sameAs": [
+        "https://github.com/harunakuforiji",
+        "https://linkedin.com/in/harunakuforiji"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://harunakuforiji.dev/#website",
+      "url": "https://harunakuforiji.dev",
+      "name": "Haruna Kuforiji | AI Evaluator Portfolio",
+      "publisher": {
+        "@id": "https://harunakuforiji.dev/#person"
+      },
+      "description": "Production-ready AI Evaluator Portfolio & Evaluation Framework website."
+    }
+  ]
+}

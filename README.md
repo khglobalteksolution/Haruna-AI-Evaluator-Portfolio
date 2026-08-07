@@ -1,90 +1,47 @@
-# Haruna Kuforiji — Senior AI Evaluator & LLM Specialist Portfolio
+# Haruna Kuforiji — AI Evaluator Portfolio & Framework
 
-A full-stack, production-ready portfolio and evaluation framework showcase for **Haruna Kuforiji** (Senior AI Evaluator, LLM Safety Specialist & Prompt Engineer).
+Production-Ready, Modular AI Evaluation Portfolio & LLM Benchmarking Suite built with React, TypeScript, Tailwind CSS, and Motion.
 
-This web application features interactive AI benchmarking dashboards, 20 prompt engineering experiments with live XML guardrail testing, 25 comprehensive case study evaluation reports, an embedded PDF document viewer, an ATS-optimized professional resume, and downloadable rubric schemas.
+## 🚀 Overview
 
----
+This repository houses the structural portfolio, evaluation framework, benchmark rubrics, research suite, and live dashboard architecture for Haruna Kuforiji (Senior AI Evaluator & LLM Safety Specialist).
 
-## 📁 Complete Project Directory Structure
+### Key Features
+
+- **Dynamic Evaluation Engine**: Loads evaluation reports and benchmark suites directly from JSON schema files (`/public/data/evaluations/*.json`).
+- **Comprehensive Rubric Matrix**: Pre-configured categories covering Safety & Alignment, Hallucination Risk, Reasoning, Code Synthesis, and RAG.
+- **Export & Compliance**: Instant client-side PDF document generation, raw JSON schema viewer, and printable audit logs.
+- **Interactive Analytics**: Dashboard with radar charts, performance metrics, and model comparison matrices.
+- **Prompt Engineering Lab**: Parameterized system prompt testing and compliance score tracking.
+- **Accessibility & SEO**: WCAG AA color contrast, dark/light mode toggle, sitemap.xml, robots.txt, and JSON-LD structured schema.
+
+## 🛠️ File Architecture
 
 ```text
-.
-├── assets/                  # Primary static branding assets
-│   └── images/              # Image assets (avatar.svg, badge.svg, hero-banner.svg)
-├── pdf/                     # Downloadable PDF document repository
-│   ├── Haruna_Kuforiji_Senior_AI_Evaluator_Resume_2026.pdf
-│   ├── AI_Evaluator_Methodology_Handbook_Haruna_Kuforiji.pdf
-│   ├── Prompt_Engineering_System_Guardrails_Guide.pdf
-│   ├── Hallucination_Fact_Verification_Handbook.pdf
-│   ├── AI_QA_Reviewer_Operations_Manual.pdf
-│   ├── Responsible_AI_Ethics_Evaluation_Framework.pdf
-│   └── Research_Notes_Industry_Observations_2026.pdf
-├── public/                  # Public assets served directly by Vite
-│   ├── assets/
-│   │   └── images/          # Public fallback images
-│   ├── pdf/                 # Public PDF assets
-│   ├── data/                # JSON schemas for evaluations, prompts, and research
-│   │   ├── evaluations/
-│   │   ├── prompts/
-│   │   └── research/
-│   ├── robots.txt           # Search engine crawler instructions
-│   ├── sitemap.xml          # XML sitemap for SEO indexation
-│   └── schema.jsonld        # JSON-LD Structured Data (Person, WebSite, Schema)
-├── src/                     # React TypeScript Source Code
+/
+├── public/
+│   ├── data/
+│   │   ├── evaluations/    # Dynamic JSON report files
+│   │   ├── reports/        # Executive summary datasets
+│   │   ├── prompts/        # Prompt laboratory benchmarks
+│   │   └── research/       # Methodology whitepapers
+│   ├── sitemap.xml
+│   ├── robots.txt
+│   └── schema.jsonld
+├── src/
 │   ├── components/
-│   │   ├── common/          # Reusable UI components (PdfDocumentViewer, Header, Footer, Card, etc.)
-│   │   ├── views/           # Primary page views (HomeView, ResumeView, PromptLabView, DownloadsView, etc.)
-│   │   └── widgets/         # Interactive tools (GeminiTesterWidget, BenchmarkChartWidget)
-│   ├── context/             # Global DataContext state management
-│   ├── data/                # Initial seed datasets (defaultData, reportsData, promptsData, etc.)
-│   ├── types/               # TypeScript type declarations
-│   ├── App.tsx              # Application root view switcher
-│   ├── index.css            # Global Tailwind CSS styling rules
-│   └── main.tsx             # React DOM application mount point
-├── index.html               # Main HTML entry point
-├── metadata.json            # AI Studio Applet metadata
-├── package.json             # NPM dependencies and project scripts
-├── tsconfig.json            # TypeScript compiler configuration
-└── vite.config.ts           # Vite build and dev server configuration
+│   │   ├── common/         # Cards, Tables, Pagination, Filters, Timelines, PDF, Markdown
+│   │   └── views/          # 11 distinct view pages
+│   ├── context/            # Theme and Data state context providers
+│   ├── types/              # Strong TypeScript definitions
+│   └── data/               # Default structural schema templates & loaders
 ```
+
+## 📜 Usage & Maintenance
+
+To add a new evaluation report:
+1. Create a new JSON file under `public/data/evaluations/eval-XXX.json` matching `EvaluationReport` interface schema.
+2. The UI will automatically parse, index, render, and filter the report across all views without requiring code changes.
 
 ---
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or bun
-
-### 1. Installation
-Clone or unpack the project folder and install the dependencies:
-```bash
-npm install
-```
-
-### 2. Development Server
-Run the local Vite development server:
-```bash
-npm run dev
-```
-Open `http://localhost:3000` in your web browser.
-
-### 3. Production Build
-To create a minified, production-ready static build:
-```bash
-npm run build
-```
-The output will be generated inside the `dist/` directory with relative asset paths ready for hosting on GitHub Pages, Vercel, Netlify, or Cloud Run.
-
----
-
-## 🔒 Security & Standards Compliance
-
-- **Relative Paths**: All CSS, JS, image, and PDF links utilize strict relative paths (`./`) for seamless offline or sub-path deployment.
-- **ATS Resume Compliance**: The embedded resume follows ATS standards with high contrast typography and clean hierarchy.
-- **WCAG 2.1 AA**: Accessibility contrast standards met across dark and light themes.
-
----
-
-© 2026 Haruna Kuforiji. All rights reserved.
+*Maintained by Haruna Kuforiji | AI Evaluation & LLM Safety Specialist*

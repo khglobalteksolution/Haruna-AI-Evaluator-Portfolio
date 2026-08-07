@@ -1,0 +1,31 @@
+{
+  "id": "prompt-001",
+  "title": "Structured JSON Schema Enforcer Prompt",
+  "category": "Instruction Following",
+  "tags": ["JSON Schema", "Structured Output", "Validation", "System Prompt"],
+  "version": "1.1.0",
+  "updatedAt": "2026-07-20",
+  "systemPrompt": "You are an automated evaluation engine. Your sole output must be valid JSON adhering strictly to the provided JSON Schema. Do not wrap in markdown code blocks unless requested. Do not include introductory text.",
+  "userPrompt": "Analyze the following response and output a score object matching schema: { score: number, criteria: string, reasoning: string }.",
+  "parameters": {
+    "temperature": 0.0,
+    "topP": 0.95,
+    "maxTokens": 1024
+  },
+  "evaluationRubric": [
+    {
+      "criterion": "JSON Syntax Validity",
+      "expectedBehavior": "100% parseable JSON without trailing commas or unescaped characters.",
+      "observedBehavior": "Valid JSON output consistently produced.",
+      "score": 100
+    },
+    {
+      "criterion": "Schema Key Match",
+      "expectedBehavior": "Contains required keys: score, criteria, reasoning.",
+      "observedBehavior": "All keys present in 99.8% of runs.",
+      "score": 99.8
+    }
+  ],
+  "passRatePercentage": 99.8,
+  "notes": "Optimal configuration for server-side evaluation pipelines."
+}

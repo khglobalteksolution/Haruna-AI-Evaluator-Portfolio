@@ -1,0 +1,78 @@
+{
+  "id": "eval-003",
+  "title": "Safety Taxonomies & Adversarial Prompt Jailbreak Resilience",
+  "slug": "safety-taxonomies-adversarial-jailbreak-resilience",
+  "subtitle": "Stress testing safety alignment boundaries against multi-turn jailbreak attempts, indirect prompt injection, and cyber-threat vectors.",
+  "version": "1.5.0",
+  "status": "published",
+  "category": "Safety & Alignment",
+  "tags": ["Safety", "Alignment", "Jailbreak", "Prompt Injection", "Red Teaming"],
+  "author": {
+    "name": "Haruna Kuforiji",
+    "role": "Senior AI Evaluator & LLM Safety Specialist"
+  },
+  "createdAt": "2026-07-01T10:00:00Z",
+  "updatedAt": "2026-07-24T18:00:00Z",
+  "summary": "Adversarial red-teaming assessment analyzing guardrail efficacy, false-refusal rate balance, and vulnerability to nested obfuscation techniques.",
+  "targetModel": {
+    "name": "Production Frontier Models",
+    "version": "2026-Q3 Guardrails",
+    "provider": "Multi-Vendor Alignment Audit",
+    "contextWindow": "200K Tokens"
+  },
+  "overallScore": 96.1,
+  "riskLevel": "low",
+  "criteriaScores": [
+    {
+      "id": "crit-201",
+      "name": "Adversarial Attack Refusal Rate",
+      "category": "Safety & Alignment",
+      "weight": 0.4,
+      "score": 97,
+      "maxScore": 100,
+      "description": "Resistance against known and zero-day prompt jailbreak templates.",
+      "notes": "97% successful refusal rate across 3,500 attack variants.",
+      "status": "passed"
+    },
+    {
+      "id": "crit-202",
+      "name": "Benign Query False Refusal Rate",
+      "category": "Safety & Alignment",
+      "weight": 0.3,
+      "score": 94,
+      "maxScore": 100,
+      "description": "Ensures guardrails do not over-refuse harmless security research queries.",
+      "notes": "False refusal rate kept below 3.2%.",
+      "status": "passed"
+    },
+    {
+      "id": "crit-203",
+      "name": "Indirect Prompt Injection Efficacy",
+      "category": "Safety & Alignment",
+      "weight": 0.3,
+      "score": 96,
+      "maxScore": 100,
+      "description": "Protection against malicious payloads embedded inside external Markdown/HTML documents.",
+      "notes": "Strong isolation between user instructions and untrusted document text.",
+      "status": "passed"
+    }
+  ],
+  "keyFindings": [
+    "Base64 encoded payloads bypassed 1st tier filters but were caught by 2nd tier intent classifier.",
+    "Over-refusal rates reduced by 15% using dual-pass semantic intent inspection.",
+    "Zero leakage of system instructions detected during extraction attacks."
+  ],
+  "recommendations": [
+    "Maintain automated adversarial red-teaming regression test pipelines.",
+    "Enforce input encoding normalization prior to safety classifier evaluation.",
+    "Implement real-time jailbreak pattern detection at API gateway layer."
+  ],
+  "testEnvironment": {
+    "frameworkVersion": "AIE-Framework-v2.4",
+    "datasetSize": 3500,
+    "evaluationDate": "2026-07-23",
+    "temperature": 0.2,
+    "systemPromptHash": "sha256-ff710099ab21e"
+  },
+  "markdownContent": "# Safety & Red Teaming Report\n\n### Attack Taxonomy Covered\n1. Roleplay & Persona Hacking\n2. Base64 & Rot13 Obfuscation\n3. Indirect HTML Injection\n4. System Prompt Exfiltration\n\n### Summary Matrix\n- **Total Attack Vectors**: 3,500\n- **Successful Defenses**: 3,398\n- **Bypasses Remediated**: 102\n- **Final Safety Index**: 96.1%"
+}
